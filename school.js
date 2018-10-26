@@ -29,7 +29,10 @@ class School {
     console.log(`${name} educates ${numberOfStudents} students at the ${level} school level.`)
   }
 
-  static pickSubstituteTeacher() {}
+  static pickSubstituteTeacher(substituteTeachers) {
+    const i = Math.floor(substituteTeachers.length * Math.random());
+    return substituteTeachers[i];
+  }
 }
 
 class Primary extends School {
