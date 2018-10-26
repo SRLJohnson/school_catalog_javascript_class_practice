@@ -18,7 +18,7 @@ class School {
   }
 
   set numberOfStudents(num) {
-    if (typeOf num === 'number') {
+    if (typeof num === 'number') {
       this._numberOfStudents = num;
     } else {
       console.log('Invalid input: numberOfStudents must be set to a Number.');
@@ -30,16 +30,14 @@ class School {
   }
 
   static pickSubstituteTeacher(substituteTeachers) {
-    const i = Math.floor(substituteTeachers.length * Math.random());
-    return substituteTeachers[i];
+    const teacherIndex = Math.floor(substituteTeachers.length * Math.random());
+    return substituteTeachers[teacherIndex];
   }
 }
 
 class Primary extends School {
-  constructor (name, level, numberOfStudents) {
-    super(name);
-    super(level);
-    super(numberOfStudents);
+  constructor (name, numberOfStudents, pickUpPolicy) {
+    super(name, 'primary', numberOfStudents);
   }
 
   pickUpPolicy() {}
