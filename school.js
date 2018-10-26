@@ -47,18 +47,20 @@ class Primary extends School {
 }
 
 class Middle extends School {
-  constructor (name) {
-    super(name);
+  constructor (name, numberOfStudents) {
+    super(name, 'middle', numberOfStudents);
   }
 }
 
 class High extends School {
   constructor (name, sportsTeams) {
-    super(name);
-    this._sportsTeams = [];
+    super(name, 'high', numberOfStudents);
+    this._sportsTeams = sportsTeams;
   }
 
   get sportsTeams() {
     return this._sportsTeams;
+    console.log(this._sportsTeams);
+
   }
 }
