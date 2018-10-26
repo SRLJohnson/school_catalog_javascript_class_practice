@@ -25,7 +25,9 @@ class School {
     }
   }
 
-  quickFacts() {}
+  quickFacts() {
+    console.log(`${name} educates ${numberOfStudents} students at the ${level} school level.`)
+  }
 
   static pickSubstituteTeacher() {}
 }
