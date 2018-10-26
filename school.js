@@ -70,3 +70,5 @@ class High extends School {
 const stateRoad = new Primary('State Road', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.');
 
 stateRoad.quickFacts();
+
+console.log(School.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli']));
