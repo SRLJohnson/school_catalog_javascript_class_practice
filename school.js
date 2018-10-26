@@ -38,9 +38,12 @@ class School {
 class Primary extends School {
   constructor (name, numberOfStudents, pickUpPolicy) {
     super(name, 'primary', numberOfStudents);
+    this._pickUpPolicy = pickUpPolicy;
   }
 
-  pickUpPolicy() {}
+  get pickUpPolicy() {
+    return this._pickUpPolicy;
+  }
 }
 
 class Middle extends School {
