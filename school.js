@@ -53,7 +53,7 @@ class Middle extends School {
 }
 
 class High extends School {
-  constructor (name, sportsTeams) {
+  constructor (name, numberOfStudents, sportsTeams) {
     super(name, 'high', numberOfStudents);
     this._sportsTeams = sportsTeams;
   }
@@ -67,8 +67,12 @@ class High extends School {
 
 //-------------------------------------------------
 
-const stateRoad = new Primary('State Road', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.');
+const stateRoad = new Primary('State Road', true, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.');
 
 stateRoad.quickFacts();
 
 console.log(School.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli']));
+
+const central = new High('Central High', 415, ['Baseball', 'Basketball', 'Volleyball', 'Track and Field']);
+
+console.log(central.sportsTeams);
