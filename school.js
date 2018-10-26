@@ -1,5 +1,5 @@
 class School {
-  constructor(name) {
+  constructor(name, level, numberOfStudents) {
     this._name = name;
     this._level = level;
     this._numberOfStudents = numberOfStudents;
@@ -18,7 +18,11 @@ class School {
   }
 
   set numberOfStudents(num) {
-    this._numberOfStudents = num;
+    if (typeOf num === 'number') {
+      this._numberOfStudents = num;
+    } else {
+      console.log('Invalid input: numberOfStudents must be set to a Number.');
+    }
   }
 
   quickFacts() {}
@@ -27,8 +31,10 @@ class School {
 }
 
 class Primary extends School {
-  constructor (name) {
+  constructor (name, level, numberOfStudents) {
     super(name);
+    super(level);
+    super(numberOfStudents);
   }
 
   pickUpPolicy() {}
