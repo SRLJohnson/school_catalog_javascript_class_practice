@@ -26,7 +26,7 @@ class School {
   }
 
   quickFacts() {
-    console.log(`${name} educates ${numberOfStudents} students at the ${level} school level.`)
+    console.log(`${this._name} educates ${this._numberOfStudents} students at the ${this._level} school level.`)
   }
 
   static pickSubstituteTeacher(substituteTeachers) {
@@ -64,3 +64,9 @@ class High extends School {
 
   }
 }
+
+//-------------------------------------------------
+
+const stateRoad = new Primary('State Road', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.');
+
+stateRoad.quickFacts();
