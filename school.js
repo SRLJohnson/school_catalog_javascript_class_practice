@@ -2,7 +2,7 @@ class School {
   constructor(name, level, numberOfStudents) {
     this._name = name;
     this._level = level;
-    this._numberOfStudents = numberOfStudents;
+    this.numberOfStudents = numberOfStudents;
   }
 
   get name() {
@@ -17,21 +17,21 @@ class School {
     return this._numberOfStudents;
   }
 
-/*  set numberOfStudents(num) {
+  set numberOfStudents(num) {
     if (typeof num !== 'number') {
       console.log('Invalid input: numberOfStudents must be set to a Number.');
     } else {
       this._numberOfStudents = num;
     }
-  }*/
+  }
 
-  set numberOfStudents(num) {
-    if (num.isNaN()) {
+/*  set numberOfStudents(num) {
+    if (isNaN(num)) {
       console.log('Invalid input: numberOfStudents must be set to a Number.');
     } else {
       this._numberOfStudents = num;
     }
-  }
+  }*/
 
   quickFacts() {
     console.log(`${this._name} educates ${this._numberOfStudents} students at the ${this._level} school level.`)
