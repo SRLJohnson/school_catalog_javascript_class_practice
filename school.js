@@ -17,11 +17,19 @@ class School {
     return this._numberOfStudents;
   }
 
-  set numberOfStudents(num) {
-    if (typeof num === 'number') {
-      this._numberOfStudents = num;
-    } else {
+/*  set numberOfStudents(num) {
+    if (typeof num !== 'number') {
       console.log('Invalid input: numberOfStudents must be set to a Number.');
+    } else {
+      this._numberOfStudents = num;
+    }
+  }*/
+
+  set numberOfStudents(num) {
+    if (num.isNaN()) {
+      console.log('Invalid input: numberOfStudents must be set to a Number.');
+    } else {
+      this._numberOfStudents = num;
     }
   }
 
